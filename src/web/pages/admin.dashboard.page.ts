@@ -12,9 +12,13 @@ export class AdminDashboardPage {
   constructor(private readonly page: Page) {}
 
   async isLoaded(): Promise<boolean> {
+    // Authed once the console nav renders. WAIT for a stable nav link (an instant
+    // isVisible() races the render) rather than a home-page heading that drifts.
     return this.page
-      .getByRole('heading', { name: /Today at a Glance/i })
-      .isVisible()
+      .getByRole('link', { name: 'Bookings', exact: true })
+      .first()
+      .waitFor({ state: 'visible', timeout: 8000 })
+      .then(() => true)
       .catch(() => false);
   }
 

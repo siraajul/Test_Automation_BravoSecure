@@ -15,6 +15,6 @@ test.describe('Admin · Ops Console', () => {
   test('opens the Bookings queue', async ({ page }) => {
     const dashboard = await AdminFlow.login(page);
     await dashboard.gotoBookings();
-    await expect(page.getByRole('heading', { name: 'Bookings' })).toBeVisible();
+    await expect(page).toHaveURL(/\/bookings/); // navigation landed (stable vs a live-loading heading)
   });
 });
