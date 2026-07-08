@@ -40,7 +40,7 @@ Welcome ──"Sign In"──▶ Sign-in form (email + password) ─────
         Restore Backup (argon2id; 5 wrong = 1h cooldown) ──"RESTORE"──▶
         "Restoring your messages…" (pulls server-side history) ──▶ HOME
 ```
-\* Location is REQUIRED. See `src/pages/login.page.ts` + `src/pages/biometric.page.ts`.
+\* Location is REQUIRED. See `src/mobile/pages/login.page.ts` + `src/mobile/pages/biometric.page.ts`.
 
 ## Navigation map
 
@@ -119,5 +119,5 @@ a **live mission** (`MSN-…`, e.g. "Siddirganj → Gulshan", with **Track** + *
   Book Now (real CPO dispatch), Force native crash, Log Out, repeated backup-password
   attempts (5 = 1-hour cooldown).
 - **Biometric**: real fingerprint can't be injected; use the "Use PIN" fallback
-  (`src/pages/biometric.page.ts`) or toggle off Profile → Security → Biometric Lock.
+  (`src/mobile/pages/biometric.page.ts`) or toggle off Profile → Security → Biometric Lock.
 - Screenshots exceed inline token limits → capture with `scripts/cap.sh` (auto-downscales).
