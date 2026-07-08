@@ -1,0 +1,128 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e2]:
+    - navigation [ref=e3]:
+      - generic [ref=e4]: BR
+      - generic [ref=e6]:
+        - link "Dashboard" [ref=e7] [cursor=pointer]:
+          - /url: /dashboard
+          - img [ref=e8]
+        - link "Bookings" [ref=e13] [cursor=pointer]:
+          - /url: /bookings
+          - img [ref=e14]
+        - link "Job Feed" [ref=e17] [cursor=pointer]:
+          - /url: /jobs
+          - img [ref=e18]
+        - link "Agents" [ref=e22] [cursor=pointer]:
+          - /url: /agents
+          - img [ref=e23]
+        - link "Live Ops" [ref=e26] [cursor=pointer]:
+          - /url: /live
+          - img [ref=e27]
+        - link "Messenger" [ref=e31] [cursor=pointer]:
+          - /url: /messenger
+          - img [ref=e32]
+        - link "Departments" [ref=e34] [cursor=pointer]:
+          - /url: /departments
+          - img [ref=e35]
+        - link "Finance" [ref=e38] [cursor=pointer]:
+          - /url: /finance
+          - img [ref=e39]
+        - link "Analytics" [ref=e41] [cursor=pointer]:
+          - /url: /analytics
+          - img [ref=e42]
+      - link "Settings" [ref=e44] [cursor=pointer]:
+        - /url: /settings
+        - img [ref=e45]
+      - generic [ref=e48]: OP
+    - banner [ref=e49]:
+      - generic [ref=e50]:
+        - img [ref=e51]
+        - text: Search bookings, agents, jobs…
+        - generic [ref=e54]: ⌘K
+      - generic [ref=e55]: 2026-06-21 · 18:38:27 UTC
+      - link "No active SOS" [ref=e56] [cursor=pointer]:
+        - /url: /live
+        - img [ref=e57]
+      - generic [ref=e60] [cursor=pointer]:
+        - generic [ref=e61]: …
+        - generic [ref=e62]:
+          - generic [ref=e63]: …
+          - generic [ref=e64]: …
+        - button "SIGN OUT" [ref=e65]
+    - main [ref=e66]:
+      - generic [ref=e67]:
+        - generic [ref=e68]:
+          - generic [ref=e69]: Ops · Bookings · 53a110f9-44aa-4854-a3cc-d5f1df97c6cc
+          - heading "Booking D5F1DF97C6CC ● PENDING OPS" [level=2] [ref=e70]:
+            - text: Booking
+            - generic [ref=e71]: D5F1DF97C6CC
+            - generic [ref=e72]: ● PENDING OPS
+        - generic [ref=e73]:
+          - link "← BACK TO QUEUE" [ref=e74] [cursor=pointer]:
+            - /url: /bookings
+          - button "CONTACT CLIENT ▾" [disabled] [ref=e76] [cursor=pointer]
+      - generic [ref=e77]:
+        - generic [ref=e78]:
+          - generic [ref=e79]:
+            - generic [ref=e80]: —
+            - generic [ref=e81]:
+              - generic [ref=e82]: Loading…
+              - generic [ref=e83]: Loading…
+          - generic [ref=e84]:
+            - generic [ref=e85]: Service
+            - generic [ref=e86]: —
+          - generic [ref=e87]:
+            - generic [ref=e88]: Pickup
+            - generic [ref=e89]: —
+          - generic [ref=e90]:
+            - generic [ref=e91]: Dropoff
+            - generic [ref=e92]: —
+          - generic [ref=e93]:
+            - generic [ref=e94]: Pickup Time
+            - generic [ref=e95]: —
+          - generic [ref=e96]:
+            - generic [ref=e97]: Crew Requested
+            - generic [ref=e98]: —
+          - generic [ref=e100]:
+            - generic:
+              - region "Map" [ref=e101]
+              - button "Map marker" [ref=e102] [cursor=pointer]
+              - button "Map marker" [ref=e103] [cursor=pointer]
+            - link "Mapbox homepage" [ref=e105] [cursor=pointer]:
+              - /url: https://www.mapbox.com/
+          - generic [ref=e106]:
+            - generic [ref=e107]: Audit Timeline
+            - generic [ref=e109] [cursor=pointer]: 0 EVENTS
+          - generic [ref=e110]: No audit events yet.
+        - generic [ref=e111]:
+          - generic [ref=e112]:
+            - generic [ref=e114]: State Machine
+            - generic [ref=e117]:
+              - generic [ref=e118]:
+                - generic [ref=e119]: ✓
+                - generic [ref=e120]: Submit
+              - generic [ref=e121]:
+                - generic [ref=e122]: "2"
+                - generic [ref=e123]: Ops Review
+              - generic [ref=e124]:
+                - generic [ref=e125]: "3"
+                - generic [ref=e126]: Approved
+              - generic [ref=e127]:
+                - generic [ref=e128]: "4"
+                - generic [ref=e129]: Payment
+              - generic [ref=e130]:
+                - generic [ref=e131]: "5"
+                - generic [ref=e132]: Confirm
+              - generic [ref=e133]:
+                - generic [ref=e134]: "6"
+                - generic [ref=e135]: Live
+              - generic [ref=e136]:
+                - generic [ref=e137]: "7"
+                - generic [ref=e138]: Complete
+          - generic [ref=e139]:
+            - generic [ref=e140]:
+              - generic [ref=e141]: Pricing
+              - generic [ref=e143] [cursor=pointer]: EUR · AED
+            - generic [ref=e145]: Loading…
+          - generic [ref=e146]: READ-ONLY · Decision actions require SUPERVISOR or ADMIN.
+  - alert [ref=e147]

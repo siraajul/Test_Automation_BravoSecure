@@ -1,0 +1,134 @@
+- generic [active] [ref=e1]:
+  - alert [ref=e14]
+  - generic [ref=e23]:
+    - navigation [ref=e24]:
+      - generic [ref=e25]: BR
+      - generic [ref=e27]:
+        - link "Dashboard" [ref=e28] [cursor=pointer]:
+          - /url: /dashboard
+          - img [ref=e29]
+        - link "Bookings" [ref=e34] [cursor=pointer]:
+          - /url: /bookings
+          - img [ref=e35]
+        - link "Job Feed" [ref=e38] [cursor=pointer]:
+          - /url: /jobs
+          - img [ref=e39]
+        - link "Agents" [ref=e43] [cursor=pointer]:
+          - /url: /agents
+          - img [ref=e44]
+        - link "Live Ops" [ref=e47] [cursor=pointer]:
+          - /url: /live
+          - img [ref=e48]
+        - link "Messenger" [ref=e52] [cursor=pointer]:
+          - /url: /messenger
+          - img [ref=e53]
+        - link "Departments" [ref=e55] [cursor=pointer]:
+          - /url: /departments
+          - img [ref=e56]
+        - link "Finance" [ref=e59] [cursor=pointer]:
+          - /url: /finance
+          - img [ref=e60]
+        - link "Analytics" [ref=e62] [cursor=pointer]:
+          - /url: /analytics
+          - img [ref=e63]
+      - link "Settings" [ref=e65] [cursor=pointer]:
+        - /url: /settings
+        - img [ref=e66]
+      - generic [ref=e69]: OP
+    - banner [ref=e70]:
+      - generic [ref=e71]:
+        - img [ref=e72]
+        - text: Search bookings, agents, jobs…
+        - generic [ref=e75]: ⌘K
+      - generic [ref=e76]: 2026-06-21 · 12:07:29 UTC
+      - link "No active SOS" [ref=e77] [cursor=pointer]:
+        - /url: /live
+        - img [ref=e78]
+      - generic [ref=e81] [cursor=pointer]:
+        - generic [ref=e82]: …
+        - generic [ref=e83]:
+          - generic [ref=e84]: …
+          - generic [ref=e85]: …
+        - button "SIGN OUT" [ref=e86]
+    - main [ref=e87]:
+      - generic [ref=e88]:
+        - generic [ref=e89]:
+          - generic [ref=e90]: Ops · Home
+          - heading "Today at a Glance" [level=2] [ref=e91]
+        - generic [ref=e92]:
+          - generic [ref=e93]: ● LIVE
+          - generic [ref=e94]: API ONLINE
+      - generic [ref=e95]:
+        - generic [ref=e96]:
+          - generic [ref=e98]: Pending Approval
+          - generic [ref=e99]: "0"
+        - generic [ref=e100]:
+          - generic [ref=e102]: Active Missions
+          - generic [ref=e103]: "10"
+        - generic [ref=e104]:
+          - generic [ref=e106]: Agents On Duty
+          - generic [ref=e107]: 5/28
+        - generic [ref=e108]:
+          - generic [ref=e110]: Open Jobs
+          - generic [ref=e111]: "23"
+        - generic [ref=e112]:
+          - generic [ref=e114]: Today's GMV
+          - generic [ref=e115]: 0 AED
+      - generic [ref=e116]:
+        - generic [ref=e117]:
+          - generic [ref=e118]:
+            - generic [ref=e119]: Approval Queue
+            - link "VIEW ALL · 0 →" [ref=e121] [cursor=pointer]:
+              - /url: /bookings
+          - generic [ref=e123]: No bookings awaiting approval.
+        - generic [ref=e124]:
+          - generic [ref=e125]:
+            - generic [ref=e126]: Live Ops Map
+            - generic [ref=e128] [cursor=pointer]: 10 ACTIVE · 0 SOS
+          - generic [ref=e129]:
+            - generic:
+              - region "Map" [ref=e130]
+              - button "Map marker" [ref=e131] [cursor=pointer]
+              - button "Map marker" [ref=e132] [cursor=pointer]
+              - button "Map marker" [ref=e133] [cursor=pointer]
+              - button "Map marker" [ref=e134] [cursor=pointer]
+              - button "Map marker" [ref=e135] [cursor=pointer]
+              - button "Map marker" [ref=e136] [cursor=pointer]
+              - button "Map marker" [ref=e137] [cursor=pointer]
+            - link "Mapbox homepage" [ref=e139] [cursor=pointer]:
+              - /url: https://www.mapbox.com/
+        - generic [ref=e140]:
+          - generic [ref=e141]:
+            - generic [ref=e142]: Activity
+            - generic [ref=e144] [cursor=pointer]: ● STREAM
+          - generic [ref=e145]:
+            - generic [ref=e146]:
+              - generic [ref=e147]: 12:01Z
+              - generic [ref=e148]: WOLF approved fff52aee · published to agent feed as JF-1D79C8055B20
+            - generic [ref=e149]:
+              - generic [ref=e150]: 12:00Z
+              - generic [ref=e151]: WOLF approved 435ed884 · published to agent feed as JF-029794F29B0A
+            - generic [ref=e152]:
+              - generic [ref=e153]: 11:33Z
+              - generic [ref=e154]: WOLF approved 1eb3958d · published to agent feed as JF-DA52B84203A8
+            - generic [ref=e155]:
+              - generic [ref=e156]: 10:24Z
+              - generic [ref=e157]: WOLF approved d5736a1b · published to agent feed as JF-BFBE95A60F11
+            - generic [ref=e158]:
+              - generic [ref=e159]: 09:46Z
+              - generic [ref=e160]: WOLF terminated agent 5a2b77a9
+            - generic [ref=e161]:
+              - generic [ref=e162]: 09:46Z
+              - generic [ref=e163]: WOLF approved partner 5a2b77a9
+            - generic [ref=e164]:
+              - generic [ref=e165]: 08:06Z
+              - generic [ref=e166]: WOLF approved 9992cd88 · published to agent feed as JF-3330B60796F3
+            - generic [ref=e167]:
+              - generic [ref=e168]: 07:58Z
+              - generic [ref=e169]: WOLF approved partner aa7475bc
+            - generic [ref=e170]:
+              - generic [ref=e171]: 06:08Z
+              - generic [ref=e172]: WOLF approved partner 0500e5b7
+            - generic [ref=e173]:
+              - generic [ref=e174]: 17:03Z
+              - generic [ref=e175]: WOLF dispatched booking dd943094 with 1 agent(s)

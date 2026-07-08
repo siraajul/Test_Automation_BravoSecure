@@ -1,0 +1,252 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e2]:
+    - navigation [ref=e3]:
+      - generic [ref=e4]: BR
+      - generic [ref=e6]:
+        - link "Dashboard" [ref=e7] [cursor=pointer]:
+          - /url: /dashboard
+          - img [ref=e8]
+        - link "Bookings" [ref=e13] [cursor=pointer]:
+          - /url: /bookings
+          - img [ref=e14]
+        - link "Job Feed" [ref=e17] [cursor=pointer]:
+          - /url: /jobs
+          - img [ref=e18]
+        - link "Agents" [ref=e22] [cursor=pointer]:
+          - /url: /agents
+          - img [ref=e23]
+        - link "Live Ops" [ref=e26] [cursor=pointer]:
+          - /url: /live
+          - img [ref=e27]
+        - link "Messenger" [ref=e31] [cursor=pointer]:
+          - /url: /messenger
+          - img [ref=e32]
+        - link "Departments" [ref=e34] [cursor=pointer]:
+          - /url: /departments
+          - img [ref=e35]
+        - link "Finance" [ref=e38] [cursor=pointer]:
+          - /url: /finance
+          - img [ref=e39]
+        - link "Analytics" [ref=e41] [cursor=pointer]:
+          - /url: /analytics
+          - img [ref=e42]
+      - link "Settings" [ref=e44] [cursor=pointer]:
+        - /url: /settings
+        - img [ref=e45]
+      - generic [ref=e48]: OP
+    - banner [ref=e49]:
+      - generic [ref=e50]:
+        - img [ref=e51]
+        - text: Search bookings, agents, jobs…
+        - generic [ref=e54]: ⌘K
+      - generic [ref=e147]: 2026-06-21 · 18:44:48 UTC
+      - link "No active SOS" [ref=e55] [cursor=pointer]:
+        - /url: /live
+        - img [ref=e56]
+      - generic [ref=e59] [cursor=pointer]:
+        - generic [ref=e60]: WO
+        - generic [ref=e61]:
+          - generic [ref=e62]: WOLF
+          - generic [ref=e63]: ADMIN
+        - button "SIGN OUT" [ref=e64]
+    - main [ref=e65]:
+      - generic [ref=e66]:
+        - generic [ref=e67]:
+          - generic [ref=e68]: Ops · Bookings · 53a110f9-44aa-4854-a3cc-d5f1df97c6cc
+          - heading "Booking D5F1DF97C6CC ● CONFIRMED" [level=2] [ref=e148]:
+            - text: Booking
+            - generic [ref=e70]: D5F1DF97C6CC
+            - generic [ref=e71]: ● CONFIRMED
+        - generic [ref=e72]:
+          - link "← BACK TO QUEUE" [ref=e73] [cursor=pointer]:
+            - /url: /bookings
+          - button "CONTACT CLIENT ▾" [ref=e75] [cursor=pointer]
+      - generic [ref=e281]: API ERROR · application_already_decided
+      - generic [ref=e76]:
+        - generic [ref=e77]:
+          - generic [ref=e78]:
+            - generic [ref=e79]: AE
+            - generic [ref=e80]:
+              - generic [ref=e81]: Shirajul Islam
+              - generic [ref=e82]: UAE — Dubai, Abu Dhabi, Sharjah · secure_transfer · created 18:13Z
+            - generic [ref=e150]: VERIFIED
+          - generic [ref=e152]: Client
+          - generic [ref=e153]:
+            - generic [ref=e154]: SH
+            - generic [ref=e155]:
+              - generic [ref=e156]: Shirajul Islam
+              - generic [ref=e157]:
+                - button "Reveal masked email — this action will be audited" [ref=e158] [cursor=pointer]: s••••••@gmail.com
+                - text: ·
+                - button "Reveal masked phone — this action will be audited" [ref=e159] [cursor=pointer]: +880 •••• 75
+            - generic [ref=e160]:
+              - generic [ref=e161]: KYC · APPROVED
+              - generic [ref=e162]: pro
+          - generic [ref=e163]:
+            - generic [ref=e164]: Country
+            - generic [ref=e165]: —
+          - generic [ref=e166]:
+            - generic [ref=e167]: Member Since
+            - generic [ref=e168]: 6 JUN 2026
+          - generic [ref=e169]:
+            - generic [ref=e170]: Client ID
+            - generic [ref=e171]: 79d63649-6fd8-4068-9b1c-94b89ee90ced
+          - generic [ref=e83]:
+            - generic [ref=e84]: Service
+            - generic [ref=e85]: secure_transfer
+          - generic [ref=e86]:
+            - generic [ref=e87]: Pickup
+            - generic [ref=e88]: DIFC Gate Building 4, Dubai
+          - generic [ref=e89]:
+            - generic [ref=e90]: Dropoff
+            - generic [ref=e91]: —
+          - generic [ref=e92]:
+            - generic [ref=e93]: Pickup Time
+            - generic [ref=e94]: 21:15 · 21 JUN 2026
+          - generic [ref=e95]:
+            - generic [ref=e96]: Crew Requested
+            - generic [ref=e97]: 1× CPO · 1× Vehicle
+          - generic [ref=e173]: Client Preferences
+          - generic [ref=e174]:
+            - generic [ref=e175]: Booking Mode
+            - generic [ref=e176]: Immediate (Now)
+          - generic [ref=e177]:
+            - generic [ref=e178]: Duration
+            - generic [ref=e179]: 4 hours
+          - generic [ref=e180]:
+            - generic [ref=e181]: Passengers
+            - generic [ref=e182]: "2"
+          - generic [ref=e183]:
+            - generic [ref=e184]: CPOs
+            - generic [ref=e185]: "1"
+          - generic [ref=e186]:
+            - generic [ref=e187]: Vehicles
+            - generic [ref=e188]: "1"
+          - generic [ref=e189]:
+            - generic [ref=e190]: Crew Type
+            - generic [ref=e191]: Full close-protection team
+          - generic [ref=e192]:
+            - generic [ref=e193]: Add-ons
+            - generic [ref=e194]: None
+          - generic [ref=e195]:
+            - generic [ref=e196]: Region
+            - generic [ref=e197]: UAE — Dubai, Abu Dhabi, Sharjah (AE)
+          - generic [ref=e198]:
+            - generic [ref=e199]: Rate
+            - generic [ref=e200]: € 86/hr · AED 350/hr
+          - generic [ref=e201]:
+            - generic [ref=e202]: Payment
+            - generic [ref=e203]: CARD · CAPTURED
+          - generic [ref=e98]:
+            - generic:
+              - generic:
+                - region "Map" [ref=e100]
+                - button "Map marker" [ref=e101] [cursor=pointer]
+                - button "Map marker" [ref=e102] [cursor=pointer]
+              - link "Mapbox homepage" [ref=e104] [cursor=pointer]:
+                - /url: https://www.mapbox.com/
+          - generic [ref=e105]:
+            - generic [ref=e106]: Audit Timeline
+            - generic [ref=e108] [cursor=pointer]: 1 EVENTS
+          - generic [ref=e204]:
+            - generic [ref=e205]: 18:19Z
+            - generic [ref=e206]: WOLF
+            - generic [ref=e207]: booking.approve
+        - generic [ref=e110]:
+          - generic [ref=e111]:
+            - generic [ref=e113]: State Machine
+            - generic [ref=e116]:
+              - generic [ref=e117]:
+                - generic [ref=e118]: ✓
+                - generic [ref=e119]: Submit
+              - generic [ref=e120]:
+                - generic [ref=e121]: ✓
+                - generic [ref=e122]: Ops Review
+              - generic [ref=e123]:
+                - generic [ref=e124]: ✓
+                - generic [ref=e125]: Approved
+              - generic [ref=e126]:
+                - generic [ref=e127]: ✓
+                - generic [ref=e128]: Payment
+              - generic [ref=e129]:
+                - generic [ref=e130]: "5"
+                - generic [ref=e131]: Confirm
+              - generic [ref=e132]:
+                - generic [ref=e133]: "6"
+                - generic [ref=e134]: Live
+              - generic [ref=e135]:
+                - generic [ref=e136]: "7"
+                - generic [ref=e137]: Complete
+          - generic [ref=e138]:
+            - generic [ref=e139]:
+              - generic [ref=e140]: Pricing
+              - generic [ref=e142] [cursor=pointer]: EUR · AED
+            - generic [ref=e143]:
+              - generic [ref=e208]:
+                - generic [ref=e209]: Total (EUR)
+                - generic [ref=e210]: € 344
+              - generic [ref=e211]:
+                - generic [ref=e212]: Total (AED)
+                - generic [ref=e213]: AED 1,400
+              - generic [ref=e214]:
+                - generic [ref=e215]: TOTAL
+                - generic [ref=e216]: € 344
+          - generic [ref=e145]:
+            - generic [ref=e217]: Decision
+            - generic [ref=e218]:
+              - button "APPROVE & PUBLISH" [disabled] [ref=e219] [cursor=pointer]
+              - button "REJECT · REASON" [ref=e220] [cursor=pointer]
+            - generic [ref=e221]: Approving publishes a job to the agent feed and emits an audit event. Estimated 8-12 applications in the first hour.
+          - generic [ref=e222]:
+            - generic [ref=e223]:
+              - generic [ref=e224]: Team & Dispatch
+              - generic [ref=e226] [cursor=pointer]: 1/1 applicants · 1/1 vehicle
+            - generic [ref=e227]:
+              - generic [ref=e228]:
+                - generic [ref=e229]:
+                  - text: Pick 1 from applicants — 1 applied · auto-refresh every 6s
+                  - generic [ref=e230]: The picked lead marks DISPATCH / RECON / PICKUP / DROPOFF from their phone, plus pushes GPS so the auto-checkpoints fire.
+                - generic [ref=e232]:
+                  - button "✓" [ref=e279] [cursor=pointer]
+                  - generic [ref=e234]:
+                    - generic [ref=e235]: CPO 01 · Ranak
+                    - generic [ref=e236]: Tier 2 · 6 jobs · ★ n/a · applied 11m ago
+                    - generic "Black suit, white shirt, black tie. Earpiece concealed." [ref=e237]: WILL WEARBlack suit, white shirt, black tie. Earpiece concealed.
+                  - button "★ LEAD" [ref=e280] [cursor=pointer]
+              - generic [ref=e238]:
+                - generic [ref=e239]: Pick a vehicle — 6 available
+                - generic [ref=e240]:
+                  - button "VEH 14 · Lexus LX 600 Armored · B6 · A 5512 · cap 5" [ref=e241] [cursor=pointer]:
+                    - generic [ref=e243]:
+                      - generic [ref=e244]: VEH 14 · Lexus LX 600
+                      - generic [ref=e245]: Armored · B6 · A 5512 · cap 5
+                  - button "VEH 20 · Toyota LC300 Armored · B6 · A 5501 · cap 4" [ref=e246] [cursor=pointer]:
+                    - generic [ref=e248]:
+                      - generic [ref=e249]: VEH 20 · Toyota LC300
+                      - generic [ref=e250]: Armored · B6 · A 5501 · cap 4
+                  - button "VEH 21 · Mercedes G-Wagon Armored · B6 · A 5502 · cap 4" [ref=e251] [cursor=pointer]:
+                    - generic [ref=e253]:
+                      - generic [ref=e254]: VEH 21 · Mercedes G-Wagon
+                      - generic [ref=e255]: Armored · B6 · A 5502 · cap 4
+                  - button "VEH 22 · Mercedes-Benz S-Class Armored · B4 · A 6689 · cap 4" [ref=e256] [cursor=pointer]:
+                    - generic [ref=e258]:
+                      - generic [ref=e259]: VEH 22 · Mercedes-Benz S-Class
+                      - generic [ref=e260]: Armored · B4 · A 6689 · cap 4
+                  - button "VEH 23 · Cadillac Escalade ESV Armored · B6 · A 5504 · cap 6" [ref=e261] [cursor=pointer]:
+                    - generic [ref=e263]:
+                      - generic [ref=e264]: VEH 23 · Cadillac Escalade ESV
+                      - generic [ref=e265]: Armored · B6 · A 5504 · cap 6
+                  - button "VEH 30 · BMW X7 Armored · B4 · A 7812 · cap 5" [ref=e266] [cursor=pointer]:
+                    - generic [ref=e268]:
+                      - generic [ref=e269]: VEH 30 · BMW X7
+                      - generic [ref=e270]: Armored · B4 · A 7812 · cap 5
+              - generic [ref=e271]:
+                - generic [ref=e272]: Dress Instructions · optional · shown to CPOs before mission
+                - textbox "e.g. Black suit, white shirt, no tie, earpiece visible. Polished black shoes, concealed sidearm only." [ref=e273]:
+                  - /placeholder: "e.g. Black suit, white shirt, no tie, earpiece visible.\nPolished black shoes, concealed sidearm only."
+              - generic [ref=e274]:
+                - generic [ref=e275]: ✓
+                - generic [ref=e276]: READY · 1 APPLICANT + 1 VEHICLE LOCKED
+              - button "DISPATCH MISSION → LIVE" [ref=e277] [cursor=pointer]
+              - generic [ref=e278]: Dispatch locks the chosen units to this booking and flips the state to LIVE. Client app begins live tracking immediately.
+  - alert [ref=e146]

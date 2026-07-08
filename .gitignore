@@ -1,0 +1,21 @@
+node_modules/
+.DS_Store
+*.log
+.appiumlogs/
+allure-results/
+allure-report/
+
+# Secrets — never commit
+credentials.env
+.env
+
+# Scratch screenshots decoded from appium-mcp
+.tmp_shot.png
+.tmp_shot*.png
+
+# TS build + Allure reports
+.tsbuild/
+allure-results/
+allure-report/
+.explore/
+apk/

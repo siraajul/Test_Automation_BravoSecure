@@ -1,0 +1,14 @@
+- generic [ref=e1]:
+  - generic [ref=e3]:
+    - generic [ref=e4]: BRAVO · OPS CONSOLE
+    - heading "Sign in to the ops console" [level=2] [ref=e5]
+    - generic [ref=e15]:
+      - generic [ref=e16]: OTP sent to +880188888888.
+      - generic [ref=e17]:
+        - generic [ref=e18]: One-time code
+        - textbox "One-time code" [active] [ref=e19]:
+          - /placeholder: "123456"
+      - generic [ref=e20]:
+        - button "BACK" [ref=e21] [cursor=pointer]
+        - button "SIGN IN" [disabled] [ref=e22] [cursor=pointer]
+  - alert [ref=e14]
