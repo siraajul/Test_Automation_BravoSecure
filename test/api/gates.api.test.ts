@@ -1,5 +1,6 @@
 import { authGet, msgGet, msgPost } from './support/http';
 import { getSession, type Session } from './support/session';
+import { expectShape } from './support/shape';
 import { randomUUID } from 'node:crypto';
 
 /**
@@ -37,8 +38,7 @@ describe('security & state gates (device-free)', () => {
   it('B-41: TURN credentials are issued (secret not drifted)', async () => {
     const r = await msgGet('/webrtc/turn-credentials', s.token, SIGNAL_DEVICE);
     expect(r.status).toBe(200); // a drifted/missing secret would be 500 turn_not_configured
-    expect(r.json).toBeTruthy();
-    console.log('TURN =>', Object.keys(r.json ?? {}).join(','));
+    expectShape(r.json, { username: 'string', credential: 'string' });
   });
 
   it('wallet balance is readable', async () => {

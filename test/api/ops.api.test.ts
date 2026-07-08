@@ -18,9 +18,13 @@ describe('ops · admin reads (device-free)', () => {
     expect(r.status).toBe(200);
   });
 
-  it('GET /ops/bookings lists bookings', async () => {
+  it('GET /ops/bookings returns bookings with ids', async () => {
     const r = await authGet('/ops/bookings', token);
     expect(r.status).toBe(200);
+    const bookings = r.json?.bookings ?? r.json;
+    expect(Array.isArray(bookings)).toBe(true);
+    expect(bookings.length).toBeGreaterThan(0);
+    expect(typeof bookings[0].id).toBe('string');
   });
 
   it('GET /ops/deptchat/incidents is reachable', async () => {

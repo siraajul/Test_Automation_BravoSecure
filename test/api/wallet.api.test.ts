@@ -1,5 +1,6 @@
 import { authGet } from './support/http';
 import { getSession } from './support/session';
+import { expectShape } from './support/shape';
 
 /** M1 — wallet reads (device-free, client token). */
 describe('wallet · reads (device-free)', () => {
@@ -8,9 +9,10 @@ describe('wallet · reads (device-free)', () => {
     token = (await getSession('client2')).token;
   });
 
-  it('GET /wallet/balance', async () => {
+  it('GET /wallet/balance returns credits + currency', async () => {
     const r = await authGet('/wallet/balance', token);
     expect(r.status).toBe(200);
+    expectShape(r.json, { bravo_credits: 'number', currency: 'string' });
   });
 
   it('GET /wallet/transactions', async () => {
