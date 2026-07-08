@@ -18,7 +18,7 @@ describe('E2E-D · CPO applies to the job', () => {
     await JobMarketplacePage.waitUntilActive(15000).catch(() => undefined);
     await $(
       `android=new UiScrollable(new UiSelector().scrollable(true)).scrollIntoView(new UiSelector().textContains("${JF}"))`,
-    ).catch(() => undefined);
+    ).isExisting().catch(() => undefined);
     await JobMarketplacePage.jobCard(JF).click();
     await browser.pause(1200);
 
