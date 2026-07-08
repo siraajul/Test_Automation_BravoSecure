@@ -6,13 +6,13 @@ import { Comms } from '../../../src/mobile/flows/comms.mr';
  * Appium-accessible (the Pixel's "Message by Number" dialog input is invisible to
  * UiAutomator2). The contact picker also yields a fresh pairwise E2E session.
  *
- *   client  = Pixel  (client1 · Shirajul)  +8801318402075   ← receiver
- *   client2 = AVD    (client2 · ITSirajul) +8801968602328   ← sender
+ *   client  = Pixel  (client1 · Shirajul)  +8801968602328   ← receiver
+ *   client2 = AVD    (client2 · ITSirajul) +8801318402075   ← sender
  *
  *   ANDROID_DEVICE=<pixel> npx wdio run ./wdio.multiremote.conf.ts \
  *     --spec ./test/mobile/comms/message.1to1.multiremote.ts
  */
-const C1_NUMBER = process.env.C1_NUMBER ?? '+8801318402075'; // Shirajul / Pixel
+const C1_NUMBER = process.env.C1_NUMBER ?? '+8801968602328'; // Shirajul / Pixel
 
 describe('Comms · 1:1 message (client2 → client1)', () => {
   it('client2 sends via contact and client1 receives it', async () => {

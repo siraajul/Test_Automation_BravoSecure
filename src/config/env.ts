@@ -69,6 +69,24 @@ export const env = {
     password: process.env.ADMIN_PASSWORD ?? '',
     otp: process.env.ADMIN_OTP ?? '',
   } as AdminAccount,
+
+  /** Dubai / UAE region agent (operator/supply side). */
+  dubaiAgent: {
+    email: process.env.DUBAI_AGENT_EMAIL ?? '',
+    password: process.env.DUBAI_AGENT_PASSWORD ?? '',
+  } as Account,
+
+  /** Dubai / UAE region CPOs (Close Protection Officers). */
+  dubaiCpo: [
+    { email: process.env.DUBAI_CPO1_EMAIL ?? '', password: process.env.DUBAI_CPO1_PASSWORD ?? '' },
+    { email: process.env.DUBAI_CPO2_EMAIL ?? '', password: process.env.DUBAI_CPO2_PASSWORD ?? '' },
+  ] as Account[],
+
+  /** Organization / corporate admin account. */
+  org: {
+    email: process.env.ORG_EMAIL ?? '',
+    password: process.env.ORG_PASSWORD ?? '',
+  } as Account,
 } as const;
 
 export type Role = 'client' | 'cpo';
