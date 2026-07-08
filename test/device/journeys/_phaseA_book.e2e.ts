@@ -1,6 +1,6 @@
-import { AuthFlow } from '../../src/mobile/flows/auth.flow';
-import { BookingFlow } from '../../src/mobile/flows/booking.flow';
-import BookingPage from '../../src/mobile/pages/client/booking.page';
+import { AuthFlow } from '../../../src/mobile/flows/auth.flow';
+import { BookingFlow } from '../../../src/mobile/flows/booking.flow';
+import BookingPage from '../../../src/mobile/pages/client/booking.page';
 
 // E2E Phase A — client (Pixel) creates a REAL booking. Captures the booking
 // summary so the admin + CPO phases can identify it.

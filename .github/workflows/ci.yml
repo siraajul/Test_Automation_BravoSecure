@@ -1,0 +1,31 @@
+name: CI
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  typecheck:
+    name: Typecheck (framework + device/web specs)
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: npm
+      - run: npm ci
+      - run: npm run typecheck
+
+  # ── The test suites need external setup — wire these up when CI has access ──
+  #
+  # crypto  (npm run test:core)  — imports @core/* from the main app repo.
+  #     Also checkout the main repo in CI and set BRAVO_MAIN_REPO to its path.
+  #
+  # api     (npm run test:api)   — hits LIVE staging with real accounts.
+  #     Provide credentials.env from a GitHub secret before running.
+  #
+  # web     (npm run test:admin) — `npm run install:browsers`, then admin creds.
+  #
+  # device  (npm run wdio)       — needs a real device / emulator + Appium.
+  #     Runs on a self-hosted runner, not the hosted ones above.

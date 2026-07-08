@@ -1,6 +1,6 @@
-import { AuthFlow } from '../../src/mobile/flows/auth.flow';
-import { accountByKey, type AccountKey } from '../../src/config/env';
-import LoginPage from '../../src/mobile/pages/login.page';
+import { AuthFlow } from '../../../src/mobile/flows/auth.flow';
+import { accountByKey, type AccountKey } from '../../../src/config/env';
+import LoginPage from '../../../src/mobile/pages/login.page';
 
 /**
  * Provision one device/emulator with a specific account. Run per device:

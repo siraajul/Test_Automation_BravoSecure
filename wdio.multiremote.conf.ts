@@ -36,7 +36,7 @@ if (client3Udid) capabilities.client3 = endpoint(client3Udid, 8203, 7813);
 
 export const config: WebdriverIO.MultiremoteConfig = {
   ...base,
-  specs: ['./test/mobile/comms/**/*.multiremote.ts'],
+  specs: ['./test/device/comms/**/*.multiremote.ts'],
   suites: undefined,
   capabilities,
 };

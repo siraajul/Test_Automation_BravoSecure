@@ -1,5 +1,5 @@
-import { AuthFlow } from '../../src/mobile/flows/auth.flow';
-import AgentDashboardPage from '../../src/mobile/pages/cpo/agentDashboard.page';
+import { AuthFlow } from '../../../src/mobile/flows/auth.flow';
+import AgentDashboardPage from '../../../src/mobile/pages/cpo/agentDashboard.page';
 
 function texts(src: string): string[] {
   return [...new Set(

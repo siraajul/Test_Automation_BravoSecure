@@ -8,16 +8,16 @@ const MAIN = process.env.BRAVO_MAIN_REPO || '/Users/sirajul/Desktop/Work/Bravo_S
 /** @type {import('jest').Config} */
 module.exports = {
   testEnvironment: 'node',
-  roots: ['<rootDir>/test/integration', '<rootDir>/test/api'],
+  roots: ['<rootDir>/test/crypto', '<rootDir>/test/api'],
   testMatch: ['**/*.core.test.ts', '**/*.api.test.ts'],
-  setupFilesAfterEnv: ['<rootDir>/test/integration/support/setup.ts'],
+  setupFilesAfterEnv: ['<rootDir>/test/crypto/support/setup.ts'],
   moduleFileExtensions: ['ts', 'js', 'json'],
   moduleNameMapper: {
     // '@bravo/messenger-core' → a crypto-only subset barrel (see coreBarrel.ts).
     // We deliberately do NOT map to the real src/index.ts because that barrel
     // re-exports src/transport/client.ts, which imports @react-native-async-storage
     // and socket.io-client — native/RN deps we don't want in a headless suite.
-    '^@bravo/messenger-core$': '<rootDir>/test/integration/support/coreBarrel.ts',
+    '^@bravo/messenger-core$': '<rootDir>/test/crypto/support/coreBarrel.ts',
     // '@core/*' → the main repo's messenger-core source tree.
     '^@core/(.*)$': path.join(MAIN, 'packages', 'messenger-core', 'src', '$1'),
   },

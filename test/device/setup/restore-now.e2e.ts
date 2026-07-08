@@ -1,8 +1,8 @@
-import { AuthFlow } from '../../src/mobile/flows/auth.flow';
-import RestoreBackupPage from '../../src/mobile/pages/restoreBackup.page';
-import { ClientNav } from '../../src/mobile/pages/client/navigation';
-import { env } from '../../src/config/env';
-import { APP_PACKAGE } from '../../src/config/capabilities';
+import { AuthFlow } from '../../../src/mobile/flows/auth.flow';
+import RestoreBackupPage from '../../../src/mobile/pages/restoreBackup.page';
+import { ClientNav } from '../../../src/mobile/pages/client/navigation';
+import { env } from '../../../src/config/env';
+import { APP_PACKAGE } from '../../../src/config/capabilities';
 
 /**
  * Submit the backup password (from env BACKUP_PASSWORD) on a device parked at the

@@ -11,14 +11,14 @@ export const config: WebdriverIO.Config = {
 
   // Single-device mobile specs (Appium). Multi-device comms/calls use
   // wdio.multiremote.conf.ts; web admin uses playwright.config.ts.
-  specs: ['./test/mobile/**/*.ts'],
+  specs: ['./test/device/**/*.ts'],
   // Named suites — run with `wdio run ... --suite <name>`.
   suites: {
-    smoke: ['./test/mobile/smoke/**/*.ts'],
-    auth: ['./test/mobile/auth/**/*.ts'],
-    client: ['./test/mobile/**/*.client.e2e.ts'],
-    cpo: ['./test/mobile/**/*.cpo.e2e.ts'],
-    regression: ['./test/mobile/**/*.ts'],
+    smoke: ['./test/device/smoke/**/*.ts'],
+    auth: ['./test/device/auth/**/*.ts'],
+    client: ['./test/device/**/*.client.e2e.ts'],
+    cpo: ['./test/device/**/*.cpo.e2e.ts'],
+    regression: ['./test/device/**/*.ts'],
   },
 
   maxInstances: 1,

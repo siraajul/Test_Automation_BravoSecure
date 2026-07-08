@@ -1,7 +1,7 @@
-import { AuthFlow } from '../../src/mobile/flows/auth.flow';
-import RestoreBackupPage from '../../src/mobile/pages/restoreBackup.page';
-import { ClientNav } from '../../src/mobile/pages/client/navigation';
-import { env } from '../../src/config/env';
+import { AuthFlow } from '../../../src/mobile/flows/auth.flow';
+import RestoreBackupPage from '../../../src/mobile/pages/restoreBackup.page';
+import { ClientNav } from '../../../src/mobile/pages/client/navigation';
+import { env } from '../../../src/config/env';
 
 /**
  * Bring a device that is already signed-in-but-parked-at-restore up to a usable

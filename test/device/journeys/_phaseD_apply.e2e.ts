@@ -1,7 +1,7 @@
-import { AuthFlow } from '../../src/mobile/flows/auth.flow';
-import AgentDashboardPage from '../../src/mobile/pages/cpo/agentDashboard.page';
-import JobMarketplacePage from '../../src/mobile/pages/cpo/jobMarketplace.page';
-import { byTextOrDesc } from '../../src/helpers/selectors';
+import { AuthFlow } from '../../../src/mobile/flows/auth.flow';
+import AgentDashboardPage from '../../../src/mobile/pages/cpo/agentDashboard.page';
+import JobMarketplacePage from '../../../src/mobile/pages/cpo/jobMarketplace.page';
+import { byTextOrDesc } from '../../../src/helpers/selectors';
 
 const JF = process.env.E2E_JF ?? 'JF-D5F1DF97C6CC';
 

@@ -15,9 +15,9 @@ There are **4 layers**. The first three need **no device** and run in ~20 s:
 | Layer | Folder | What it tests | Run | Device? |
 |-------|--------|---------------|-----|:------:|
 | **API** | `test/api/` | 527 tests — auth, messaging, booking, ops, VBG, dept, incidents, attendance, family | `npm run test:api` | ❌ |
-| **Headless crypto** | `test/integration/` | Signal protocol: 1:1 delivery, group delivery, rekey + forward secrecy | `npm run test:core` | ❌ |
+| **Headless crypto** | `test/crypto/` | Signal protocol: 1:1 delivery, group delivery, rekey + forward secrecy | `npm run test:core` | ❌ |
 | **Web (ops console)** | `test/web/` | Playwright — admin login (phone+password+OTP), nav | `npm run test:admin` | ❌ |
-| **Device E2E** | `test/mobile/`, `test/e2e/`, `test/setup/` | Appium/WebdriverIO on a real device — **blocked** on env (see below) | `npm run wdio` | ✅ |
+| **Device E2E** | `test/device/` | Appium/WebdriverIO on a real device — **blocked** on env (see below) | `npm run wdio` | ✅ |
 
 **~538 device-free tests, 100% green.** Everything that needs a phone is quarantined
 in the device layer so it doesn't get in the way of the automated suite.
@@ -27,26 +27,27 @@ in the device layer so it doesn't get in the way of the automated suite.
 ## Directory map
 
 ```
-test/
-  api/            ← THE device-free API suite (527 tests). Start here.
+test/                        ← the 4 layers, one folder each
+  api/            device-free API suite (527 tests). START HERE.
     *.api.test.ts        breadth: reads, write lifecycles, guard sweep
     *.deep.api.test.ts   depth: positive + negative + edge per endpoint
     support/             http.ts · session.ts (login cache) · shape.ts · sweep.ts · routes.json
-  integration/    ← headless crypto (no device). *.core.test.ts + support/coreBarrel.ts
-  web/            ← Playwright ops-console specs (*.spec.ts)
-  mobile/         ← device E2E: auth, client, cpo, comms, smoke  (needs a device)
-  e2e/            ← multi-phase device journeys (book → dispatch → mission)  (needs a device)
-  setup/          ← device bring-up / restore helpers  (needs a device)
-  explore/        ← ad-hoc device exploration specs  (throwaway)
+  crypto/         device-free headless crypto. *.core.test.ts + support/coreBarrel.ts
+  web/            device-free Playwright ops-console specs (*.spec.ts)
+  device/         device E2E (needs a phone) — one folder for ALL device tests:
+    auth/   client/   cpo/   comms/   smoke/    ← screen/flow specs
+    journeys/                                    ← multi-phase (book → dispatch → mission)
+    setup/                                       ← device bring-up / restore helpers
 
-src/
+src/                         ← the framework the specs use (Page Object Model)
   config/         env.ts (typed creds from credentials.env), capabilities.ts
   mobile/         Page Objects + flows for the Android app (client + cpo)
   web/            Page Objects + flows for the ops console
   helpers/        selectors, glyphs
 
-docs/scratch/     relocated ad-hoc notes (job dumps from exploration)
-scripts/          device/adb helper shell scripts
+.github/workflows/  CI (typecheck on every push)
+docs/scratch/       relocated ad-hoc notes (job dumps from exploration)
+scripts/            device/adb helper shell scripts
 ```
 
 ### Naming convention in `test/api/`
