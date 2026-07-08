@@ -31,10 +31,10 @@ add_contact() {
 
 echo "== adding contacts to $S =="
 # Mapping confirmed against credentials.env + the device's own number:
-#   Shirajul (client1) = +8801318402075   ITSirajul (client2) = +8801968602328
+#   Shirajul (client1) = +8801968602328   ITSirajul (client2) = +8801318402075
 #   Fahim    (client3) = +8801727994251
-add_contact "Shirajul Islam" "+8801318402075"
-add_contact "ITSirajul"      "+8801968602328"
+add_contact "Shirajul Islam" "+8801968602328"
+add_contact "ITSirajul"      "+8801318402075"
 add_contact "Fahim Islam"    "+8801727994251"
 echo "== phone contacts now on $S =="
 adb -s "$S" shell content query --uri content://com.android.contacts/data \

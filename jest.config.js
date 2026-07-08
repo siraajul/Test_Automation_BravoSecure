@@ -8,8 +8,8 @@ const MAIN = process.env.BRAVO_MAIN_REPO || '/Users/sirajul/Desktop/Work/Bravo_S
 /** @type {import('jest').Config} */
 module.exports = {
   testEnvironment: 'node',
-  roots: ['<rootDir>/test/integration'],
-  testMatch: ['**/*.core.test.ts'],
+  roots: ['<rootDir>/test/integration', '<rootDir>/test/api'],
+  testMatch: ['**/*.core.test.ts', '**/*.api.test.ts'],
   setupFilesAfterEnv: ['<rootDir>/test/integration/support/setup.ts'],
   moduleFileExtensions: ['ts', 'js', 'json'],
   moduleNameMapper: {

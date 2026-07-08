@@ -18,7 +18,9 @@
     "test:admin": "playwright test",
     "install:app": "bash scripts/install-app.sh",
     "install:browsers": "playwright install chromium",
-    "test:core": "jest --config jest.config.js",
+    "test:core": "jest --config jest.config.js --testPathPattern '\\.core\\.test\\.'",
+    "test:api": "jest --config jest.config.js --testPathPattern '\\.api\\.test\\.' --runInBand",
+    "test:headless": "jest --config jest.config.js --runInBand",
     "report": "allure generate allure-results --clean -o allure-report && allure open allure-report"
   },
   "keywords": [],
