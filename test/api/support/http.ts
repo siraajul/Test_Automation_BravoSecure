@@ -38,6 +38,8 @@ export const authGet = (path: string, token?: string) =>
   request(AUTH_BASE, 'GET', path, { token });
 export const authDelete = (path: string, token: string, body?: unknown) =>
   request(AUTH_BASE, 'DELETE', path, { token, body });
+export const authPatch = (path: string, body: unknown, token?: string, headers?: Record<string, string>) =>
+  request(AUTH_BASE, 'PATCH', path, { body, token, headers });
 
 export const msgPost = (path: string, body: unknown, token?: string, headers?: Record<string, string>) =>
   request(MSG_BASE, 'POST', path, { body, token, headers });
