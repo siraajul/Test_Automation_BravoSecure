@@ -1,5 +1,8 @@
-import { authPost } from './http';
+import { authPost, authGet } from './http';
 import { env } from '../../../src/config/env';
+import { readFileSync, writeFileSync } from 'node:fs';
+import { join } from 'node:path';
+import { tmpdir } from 'node:os';
 
 export interface Session {
   userId: string;
@@ -23,14 +26,57 @@ const ACCOUNTS: Record<Role, { id: string; password: string; deviceId: string }>
 // keeping a full-suite run under the /auth/login rate limit (5 per 10-min per IP).
 const cache = new Map<Role, Promise<Session>>();
 
+// Disk-backed token cache — lets SEPARATE `jest` runs reuse a still-valid token
+// instead of re-logging in, keeping iterative work off the /auth/login rate
+// limit (5 per 10-min per IP). Strictly best-effort: any miss/error/expiry falls
+// straight through to a fresh login.
+const CACHE_FILE = join(tmpdir(), 'bravo-api-sessions.json');
+const TTL_MS = 8 * 60 * 1000; // safely within the access-token lifetime
+
+interface CachedSession extends Session {
+  at: number;
+}
+
+function readDiskCache(): Record<string, CachedSession> {
+  try {
+    return JSON.parse(readFileSync(CACHE_FILE, 'utf8')) as Record<string, CachedSession>;
+  } catch {
+    return {};
+  }
+}
+
 export function getSession(role: Role): Promise<Session> {
   let p = cache.get(role);
   if (!p) {
-    const a = ACCOUNTS[role];
-    p = loginApi(a.id, a.password, a.deviceId);
+    p = resolveSession(role);
     cache.set(role, p);
   }
   return p;
+}
+
+async function resolveSession(role: Role): Promise<Session> {
+  const a = ACCOUNTS[role];
+  // Reuse a fresh, still-valid disk-cached token if one exists.
+  try {
+    const hit = readDiskCache()[role];
+    if (hit && Date.now() - hit.at < TTL_MS) {
+      const me = await authGet('/auth/me', hit.token);
+      if (me.status === 200) {
+        return { userId: hit.userId, token: hit.token, refreshToken: hit.refreshToken };
+      }
+    }
+  } catch {
+    /* fall through to a fresh login */
+  }
+  const s = await loginApi(a.id, a.password, a.deviceId);
+  try {
+    const disk = readDiskCache();
+    disk[role] = { ...s, at: Date.now() };
+    writeFileSync(CACHE_FILE, JSON.stringify(disk));
+  } catch {
+    /* best-effort persistence */
+  }
+  return s;
 }
 
 /**
