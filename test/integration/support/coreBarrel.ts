@@ -20,5 +20,8 @@ export {
   parseGroupMessage,
   makeNewGroup,
   genFreshGroupMasterKey,
+  planRemoveAndRekey,
+  planAddAndRekey,
+  applyAdminAction,
 } from '@core/groups/groupClient';
 export * from '@core/groups/types';
