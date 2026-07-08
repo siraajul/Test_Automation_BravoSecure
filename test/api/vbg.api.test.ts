@@ -1,26 +1,10 @@
-import { authGet } from './support/http';
+import { sweepReads } from './support/sweep';
 import { getSession } from './support/session';
 
-/** M1 — Virtual Bodyguard reads (device-free, client token). Reachability-level;
- * POST /vbg/panic is destructive and intentionally NOT exercised here. */
+/** M1 — Virtual Bodyguard reads (device-free, client token). POST /vbg/panic is
+ * destructive and intentionally NOT exercised here. */
+const VBG_READS = ['/vbg/monitoring/status', '/vbg/sra', '/vbg/geofences'];
+
 describe('virtual bodyguard · reads (device-free)', () => {
-  let token: string;
-  beforeAll(async () => {
-    token = (await getSession('client2')).token;
-  });
-
-  it('GET /vbg/monitoring/status is reachable', async () => {
-    const r = await authGet('/vbg/monitoring/status', token);
-    expect(r.status).toBeLessThan(500);
-  });
-
-  it('GET /vbg/sra is reachable', async () => {
-    const r = await authGet('/vbg/sra', token);
-    expect(r.status).toBeLessThan(500);
-  });
-
-  it('GET /vbg/geofences is reachable', async () => {
-    const r = await authGet('/vbg/geofences', token);
-    expect(r.status).toBeLessThan(500);
-  });
+  sweepReads('VBG', VBG_READS, async () => (await getSession('client2')).token);
 });

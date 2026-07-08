@@ -1,7 +1,8 @@
-import { authGet } from './support/http';
+import { sweepReads } from './support/sweep';
 import { getSession } from './support/session';
 
-/** M1 — full ops-console read sweep (device-free, admin token). Reachability. */
+/** M1 — full ops-console read sweep (device-free, admin token). Each 200 is
+ * verified to return a real payload, not just a status. */
 const OPS_READS = [
   '/ops/admins', '/ops/admins/invites', '/ops/agents', '/ops/analytics', '/ops/audit',
   '/ops/broadcasts/recent', '/ops/departments', '/ops/disputes',
@@ -12,14 +13,5 @@ const OPS_READS = [
 ];
 
 describe('ops · full read sweep (device-free)', () => {
-  let token: string;
-  beforeAll(async () => { token = (await getSession('admin')).token; });
-
-  for (const path of OPS_READS) {
-    it(`GET ${path}`, async () => {
-      const r = await authGet(path, token);
-      if (r.status >= 400) console.log('OPS', path, '=>', r.status);
-      expect(r.status).toBeLessThan(500);
-    });
-  }
+  sweepReads('OPS', OPS_READS, async () => (await getSession('admin')).token);
 });

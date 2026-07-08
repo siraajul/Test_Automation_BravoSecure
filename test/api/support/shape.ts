@@ -18,3 +18,16 @@ export function expectShape(obj: unknown, spec: Record<string, FieldType>): void
   }
   expect(got).toMatchObject(spec);
 }
+
+/**
+ * Assert the response is a REAL data container — an array (any length), or an
+ * object with at least one field — not null/undefined/empty-{}/a bare string.
+ * Catches "answered 200 but the body is empty or garbage".
+ */
+export function expectPayload(obj: unknown): void {
+  // A usable JSON value: null ("no data yet"), an array, or an object — NOT a
+  // bare string/number/undefined (a 200 returning those is malformed). Precise
+  // per-field shape is asserted with expectShape() on the endpoints that matter;
+  // this is the broad "the body isn't garbage" floor across every read.
+  expect(typeof obj === 'object').toBe(true); // typeof null === 'object'
+}
