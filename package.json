@@ -16,6 +16,7 @@
     "test:regression": "npm run connect && wdio run ./wdio.conf.ts --suite regression",
     "test:comms": "wdio run ./wdio.multiremote.conf.ts",
     "test:admin": "playwright test",
+    "inject:session": "bash scripts/inject-session.sh",
     "install:app": "bash scripts/install-app.sh",
     "install:browsers": "playwright install chromium",
     "test:core": "jest --config jest.config.js --testPathPattern '\\.core\\.test\\.'",
