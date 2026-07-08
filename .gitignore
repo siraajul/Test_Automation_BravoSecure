@@ -19,3 +19,8 @@ allure-results/
 allure-report/
 .explore/
 apk/
+
+# Playwright + test-run artifacts — snapshots can capture typed-in credentials; never commit
+.playwright-mcp/
+playwright-report/
+test-results/
