@@ -90,6 +90,27 @@ Each run connects the device, boots Appium automatically (`@wdio/appium-service`
 and (on failure) attaches a **screenshot + page source** to the Allure report.
 Target a different device with `ANDROID_DEVICE=<ip:port> npm test`.
 
+## Headless core tests (NO device) — `npm run test:core`
+
+Message **delivery/crypto** correctness (does A's message reach B, decrypted, in
+order?) is library logic, not UI — so it's tested headlessly with two/three
+`@bravo/messenger-core` clients in a single Jest process. No device, no emulator,
+runs in ~3s and in plain CI. This is how libsignal/TDLib test WhatsApp/Telegram.
+
+```bash
+npm run test:core        # 1:1 + group delivery — 6 tests, ~3s, 0 devices
+```
+
+Covers: 1:1 send/receive, offline backlog ordering (**B-47**), out-of-order
+recovery (**B-46**), group member/admin fan-out + the group-key gap (**B-35**).
+Does **not** cover rendering — "decrypts but never shows on screen" (**B-18**)
+still needs the device suite.
+
+Lives in `test/integration/`. It imports messenger-core straight from the app
+repo's source (default `/Users/sirajul/Desktop/Work/Bravo_Secure`, override with
+`BRAVO_MAIN_REPO`). See **[`test/integration/README.md`](test/integration/README.md)**
+for how it's wired, how to add a test, and the full testing roadmap.
+
 > Note: the app persists sessions (`noReset`) and **restores its last screen** on
 > launch, so `loginAs` treats "authenticated" as *not on the welcome screen* and
 > pages provide an `open()` that navigates back to their baseline.

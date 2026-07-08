@@ -22,8 +22,9 @@ npm run test:client      # client-role mobile suite (~4 min)
 npm run test:cpo         # cpo-role mobile suite (~2 min)
 npm run test:smoke       # smoke specs
 npm run test:auth        # auth specs (client+cpo+negative)
-npm run test:comms       # multiremote 1:1/group message+call (needs BlueStacks)  [STUB]
+npm run test:comms       # multiremote 1:1/group message+call (needs AVDs)        [STUB]
 npm run test:admin       # Playwright admin web                                   [STUB]
+npm run test:core        # headless messenger-core delivery (1:1 + group) — NO device, CI-ready
 npm run install:app <serial>  /  install:browsers
 npm run report           # Allure report
 ```
@@ -46,6 +47,8 @@ src/mobile/flows/         auth.flow.ts (loginAs/ensureLoggedOut/detectRole/compl
 src/web/                  Playwright admin — pages/, flows/admin.flow.ts  [STUB]
 test/mobile/{auth,smoke,client,cpo,comms}/   mobile specs (*.client.e2e.ts / *.cpo.e2e.ts)
 test/web/  test/e2e/       admin web specs / cross-platform complete-flow  [STUB]
+test/integration/         headless messenger-core delivery tests (*.core.test.ts) — NO device; see its README
+jest.config.js            runner for test/integration (ts-jest; maps @bravo/messenger-core → app repo source)
 scripts/                  connect-device, install-app, cap, dump, decode-shot
 apk/bravosecure.apk       pulled APK for installing on emulators
 ```
