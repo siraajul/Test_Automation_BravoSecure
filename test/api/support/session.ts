@@ -10,7 +10,7 @@ export interface Session {
   refreshToken: string;
 }
 
-export type Role = 'client1' | 'client2' | 'admin' | 'agent';
+export type Role = 'client1' | 'client2' | 'admin' | 'agent' | 'org';
 
 // Distinct deviceIds so a shared-suite session never collides with the
 // dedicated device the auth.api login/logout tests use ('bravo-api-test').
@@ -19,6 +19,7 @@ const ACCOUNTS: Record<Role, { id: string; password: string; deviceId: string }>
   client2: { id: env.clients[1].email, password: env.clients[1].password, deviceId: 'bravo-api-c2' },
   admin: { id: env.admin.user, password: env.admin.password, deviceId: 'bravo-api-admin' },
   agent: { id: env.dubaiAgent.email, password: env.dubaiAgent.password, deviceId: 'bravo-api-agent' },
+  org: { id: env.org.email, password: env.org.password, deviceId: 'bravo-api-org' },
 };
 
 // Memoized per-role login. With jest --runInBand the whole suite shares one
